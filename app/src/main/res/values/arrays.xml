@@ -1,0 +1,11 @@
+<resources>
+    <string-array name="session_sets">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+    </string-array>
+
+
+</resources>
