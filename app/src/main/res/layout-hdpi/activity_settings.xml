@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/headerLayout"
+            layout="@layout/header_layout"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_below="@id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/select_options"
+            android:gravity="center"
+            android:textSize="@dimen/header_text_size_hdpi"
+            android:padding="10dp" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_below="@id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:dividerHeight="0dp"
+            android:divider="@null"/>
+
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spinner"
+            android:layout_below="@id/listView"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button"/>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/start_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+
+            android:src="@drawable/floating"
+            android:padding="5dp"
+            android:theme="@style/FloatingActionButton.Dark" />
+    </RelativeLayout>
+</ScrollView>

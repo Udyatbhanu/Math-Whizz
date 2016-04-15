@@ -6,7 +6,7 @@
     <RelativeLayout
         android:id="@+id/expressionLayout"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="70dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="120dp">
 
@@ -19,9 +19,9 @@
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
 
-            android:paddingLeft="40dp"
+            android:paddingLeft="30dp"
             android:text="2 + 3 = ?"
-            android:textSize="60sp" />
+            android:textSize="40sp" />
     </RelativeLayout>
 
 
@@ -30,10 +30,10 @@
         <RelativeLayout
             android:id="@+id/resultPanel"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:layout_centerInParent="true"
             android:layout_below="@id/expressionLayout"
-            android:paddingBottom="25dp"
+            android:paddingBottom="20dp"
             android:layout_marginTop="10dp">
 
             <ImageView
@@ -53,7 +53,7 @@
                 android:maxLines="4"
                 android:singleLine="false"
                 android:text="@string/correct_text"
-                android:textSize="35sp" />
+                android:textSize="20sp" />
         </RelativeLayout>
 
 
@@ -64,8 +64,9 @@
 
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="20dp"
-            android:layout_marginLeft="50dp"
-            android:horizontalSpacing="-35dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="30dp"
+            android:horizontalSpacing="10dp"
             android:numColumns="2"
             android:verticalSpacing="10dp" />
 

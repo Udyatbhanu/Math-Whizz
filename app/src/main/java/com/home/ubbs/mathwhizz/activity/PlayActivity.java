@@ -23,14 +23,14 @@ public class PlayActivity extends FragmentActivity implements ChoicesAdapter.nex
 
     TextView pageNumber;
     Chronometer chronometer;
-    private long elapsedTime=0;
+    private long elapsedTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
-        pageNumber = (TextView)findViewById(R.id.page);
-        chronometer = (Chronometer)findViewById(R.id.timer);
+        pageNumber = (TextView) findViewById(R.id.page);
+        chronometer = (Chronometer) findViewById(R.id.timer);
         chronometer.start();
         updatePageNumber();
         if (savedInstanceState == null) {
@@ -43,27 +43,26 @@ public class PlayActivity extends FragmentActivity implements ChoicesAdapter.nex
             getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, playFragment, MathWhizzConstants.PLAY_FRAGMENT_TAG).commit();
         }
 
-        chronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener()
-                                            {
-                                                public void onChronometerTick(Chronometer arg0) {
+        chronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
+                                                     public void onChronometerTick(Chronometer arg0) {
 //                                                    String HH =((elapsedTime / 3600) < 10 ? "0" : "") + (elapsedTime / 3600);
-                                                    String MM =((elapsedTime / 60) < 10 ? "0" : "") + (elapsedTime / 60);
-                                                    String SS =((elapsedTime % 60) < 10 ? "0" : "") + (elapsedTime % 60);
-                                                    String currentTime = MM+":"+SS;
-                                                    elapsedTime = (SystemClock.elapsedRealtime() - arg0.getBase()) / 1000;
-                                                    chronometer.setText(currentTime);
+                                                         String MM = ((elapsedTime / 60) < 10 ? "0" : "") + (elapsedTime / 60);
+                                                         String SS = ((elapsedTime % 60) < 10 ? "0" : "") + (elapsedTime % 60);
+                                                         String currentTime = MM + ":" + SS;
+                                                         elapsedTime = (SystemClock.elapsedRealtime() - arg0.getBase()) / 1000;
+                                                         chronometer.setText(currentTime);
 
-                                                }
-                                            }
+                                                     }
+                                                 }
         );
 
 
     }
 
-    private void updatePageNumber(){
+    private void updatePageNumber() {
         int page = MathWhizzAppSession.SET_COUNTER;
-        int pageCount =  MathWhizzAppSession.SET;
-        page = pageCount - (page-1);
+        int pageCount = MathWhizzAppSession.SET;
+        page = pageCount - (page - 1);
         String text = String.format(getString(R.string.page_number_message), page, MathWhizzAppSession.SET);
 
         pageNumber.setText(text);

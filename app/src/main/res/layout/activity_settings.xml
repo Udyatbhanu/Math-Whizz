@@ -37,28 +37,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/button"/>
 
-    <!--<Spinner-->
-        <!--android:id="@+id/spinner1"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@id/listView"-->
-        <!--android:background="@drawable/button"-->
-        <!--android:spinnerMode="dropdown" />-->
 
-
-
-    <!--<LinearLayout android:id="@+id/footer" android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content" android:orientation="horizontal"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:padding="10dp">-->
-
-        <!--<Button android:id="@+id/start_button"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="@string/start_button"-->
-            <!--android:background="@drawable/button"-->
-            <!--style="@style/button_text"/>-->
-    <!--</LinearLayout>-->
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/start_button"

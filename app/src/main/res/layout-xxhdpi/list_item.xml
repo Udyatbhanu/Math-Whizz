@@ -33,8 +33,9 @@
 
         <ImageView
             android:id="@+id/operatorIcon"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:paddingTop="5dp"
             android:gravity="start"
             android:src="@mipmap/add" />
 
@@ -47,7 +48,7 @@
             android:layout_toRightOf="@id/operatorIcon"
             android:gravity="center_horizontal"
             android:text="Addition"
-            android:textSize="@dimen/text_size" />
+            android:textSize="@dimen/text_size_xxhdpi" />
 
         <CheckBox
             android:id="@+id/checkBox"
