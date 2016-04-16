@@ -9,7 +9,7 @@
     <dimen name="text_size_hdpi">15sp</dimen>
     <dimen name="text_size_xxhdpi">20sp</dimen>
 
-    <dimen name="header_text_size_hdpi">16sp</dimen>
+    <dimen name="header_text_size_hdpi">20sp</dimen>
     <dimen name="header_text_size_xxhdpi">30sp</dimen>
 
 

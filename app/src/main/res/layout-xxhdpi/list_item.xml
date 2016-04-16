@@ -48,7 +48,7 @@
             android:layout_toRightOf="@id/operatorIcon"
             android:gravity="center_horizontal"
             android:text="Addition"
-            android:textSize="@dimen/text_size_xxhdpi" />
+            android:textSize="15sp" />
 
         <CheckBox
             android:id="@+id/checkBox"

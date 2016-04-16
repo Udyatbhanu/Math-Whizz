@@ -3,6 +3,9 @@ package com.home.ubbs.mathwhizz.activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.faradaj.blurbehind.BlurBehind;
 import com.home.ubbs.mathwhizz.R;
@@ -17,6 +20,27 @@ public class CompleteActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complete);
 
+        Button closeButton  =  (Button) findViewById(R.id.close);
+        closeButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
+        RelativeLayout parentLayout  =  (RelativeLayout) findViewById(R.id.parentLayout);
+
+        parentLayout.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
         if(savedInstanceState==null){
             BlurBehind.getInstance()
                     .withAlpha(200)
@@ -25,9 +49,5 @@ public class CompleteActivity extends FragmentActivity {
         }
 
     }
-//
-//    @Override
-//    public void onBackPressed() {
-//
-//    }
+
 }
