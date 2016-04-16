@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-
-
-    android:background="@color/Yellow">
+    android:layout_height="80dp">
 
     <ImageView
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-
         android:src="@drawable/mid"
         />
 
@@ -20,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:text="12."
         android:textSize="@dimen/text_size"
         android:textStyle="bold" />
@@ -30,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/serial_no"
 
         android:text="3 + 1 = 4"
@@ -41,7 +37,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
+
+        android:layout_marginBottom="15dp"
 
         android:layout_below="@id/expression"
         android:layout_toRightOf="@id/serial_no"
@@ -50,10 +47,10 @@
 
     <ImageView
         android:id="@+id/operatorIcon"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="25dp"
+        android:layout_marginRight="10dp"
         android:layout_alignParentRight="true"
         android:src="@mipmap/ic_right" />
 

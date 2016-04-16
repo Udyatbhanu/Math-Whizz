@@ -44,7 +44,9 @@ public class PlayFragment extends Fragment {
         RelativeLayout resultsLayout = (RelativeLayout) view.findViewById(R.id.resultPanel);
         TextView textView = (TextView) view.findViewById(R.id.expression);
         textView.setText(mathFunction.toString());
+
         resultsLayout.setTranslationX(-3000f);
+
         gridview = (GridView) view.findViewById(R.id.gridview);
 
 

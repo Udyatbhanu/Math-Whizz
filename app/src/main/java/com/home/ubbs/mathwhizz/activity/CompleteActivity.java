@@ -4,7 +4,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.faradaj.blurbehind.BlurBehind;
@@ -20,14 +19,7 @@ public class CompleteActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complete);
 
-        Button closeButton  =  (Button) findViewById(R.id.close);
-        closeButton.setOnClickListener(new View.OnClickListener(){
 
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
 
         RelativeLayout parentLayout  =  (RelativeLayout) findViewById(R.id.parentLayout);
@@ -47,6 +39,15 @@ public class CompleteActivity extends FragmentActivity {
                     .withFilterColor(Color.parseColor("#C71585"))
                     .setBackground(this);
         }
+
+    }
+
+    /**
+     *
+     */
+    @Override
+    public void onBackPressed(){
+        finish();
 
     }
 

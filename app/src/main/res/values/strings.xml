@@ -10,6 +10,9 @@
     <string name="right_answer_text">The correct answer is %1$s</string>
     <string name="correct_text">Correct</string>
     <string name="wrong_text">Oops, that is wrong</string>
+    <string name="finish_text">Finish</string>
+
+
 
     <string name="complete_text">Hooray you finished your test, well done..!!</string>
 

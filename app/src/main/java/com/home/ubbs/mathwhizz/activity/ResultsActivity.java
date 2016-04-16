@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.widget.Button;
 
 import com.faradaj.blurbehind.BlurBehind;
 import com.faradaj.blurbehind.OnBlurCompleteListener;
@@ -23,6 +24,7 @@ public class ResultsActivity extends FragmentActivity implements ResultsRecycler
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    private Button finishButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,11 @@ public class ResultsActivity extends FragmentActivity implements ResultsRecycler
             decorView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
                 @Override
                 public void onGlobalLayout() {
+
+                    finishButton = (Button)mRecyclerView.findViewById(R.id.finishButton);
+                    if(null!= finishButton){
+                        finishButton.setVisibility(View.INVISIBLE);
+                    }
                     BlurBehind.getInstance().execute(ResultsActivity.this, new OnBlurCompleteListener() {
                         @Override
                         public void onBlurComplete() {
@@ -64,6 +71,14 @@ public class ResultsActivity extends FragmentActivity implements ResultsRecycler
 
 
 
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        if(null!= finishButton){
+            finishButton.setVisibility(View.VISIBLE);
+        }
     }
 
 
