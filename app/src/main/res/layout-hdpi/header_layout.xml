@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/header_background"
-        android:text= "Math Whizz"
+        android:text= "@string/header_text"
         android:textSize="18sp"
         android:textColor="@color/white"
         android:gravity="center"

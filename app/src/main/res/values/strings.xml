@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Math Whizz</string>
+    <string name="app_name">Math Test Pro</string>
     <string name="select_options">Select Options</string>
     <string name="start_button">Start</string>
 
@@ -11,6 +11,7 @@
     <string name="correct_text">Correct</string>
     <string name="wrong_text">Oops, that is wrong</string>
     <string name="finish_text">Finish</string>
+    <string name="header_text">Math Test Pro</string>
 
 
 
