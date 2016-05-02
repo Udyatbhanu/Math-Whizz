@@ -28,6 +28,7 @@ public class SettingsActivity extends FragmentActivity implements SettingsItemsA
     private List<Operator> operatorsSelected = new ArrayList<>();
 
 
+
     private int set;
 
     @Override
