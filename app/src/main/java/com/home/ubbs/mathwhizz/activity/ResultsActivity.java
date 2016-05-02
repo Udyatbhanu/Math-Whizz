@@ -2,7 +2,6 @@ package com.home.ubbs.mathwhizz.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -18,7 +17,7 @@ import com.home.ubbs.mathwhizz.view.ResultsRecyclerAdapter;
 /**
  * Created by udyatbhanu-mac on 4/8/16.
  */
-public class ResultsActivity extends FragmentActivity implements ResultsRecyclerAdapter.finishButtonListener {
+public class ResultsActivity extends BaseActivity implements ResultsRecyclerAdapter.finishButtonListener {
 
 
     private RecyclerView mRecyclerView;

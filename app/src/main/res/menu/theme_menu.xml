@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/red"
+        android:title="Red"
+        android:showAsAction="ifRoom"/>
+    <item android:id="@id/pink"
+        android:title="Pink" />
+    <item android:id="@id/purple"
+        android:title="Purple" />
+</menu>

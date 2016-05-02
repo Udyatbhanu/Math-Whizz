@@ -6,7 +6,6 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.ListView;
 
@@ -22,7 +21,7 @@ import java.util.List;
 /**
  * Created by udyatbhanu-mac on 4/3/16.
  */
-public class SettingsActivity extends FragmentActivity implements SettingsItemsAdapter.CheckStateCallback {
+public class SettingsActivity extends BaseActivity implements SettingsItemsAdapter.CheckStateCallback {
 
 
     private List<Operator> operatorsSelected = new ArrayList<>();

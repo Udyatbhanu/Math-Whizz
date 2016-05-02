@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.widget.Chronometer;
 import android.widget.TextView;
 
@@ -19,7 +18,7 @@ import com.home.ubbs.mathwhizz.view.ChoicesAdapter;
 /**
  * Created by udyatbhanu-mac on 4/3/16.
  */
-public class PlayActivity extends FragmentActivity implements ChoicesAdapter.nextPageListener {
+public class PlayActivity extends BaseActivity implements ChoicesAdapter.nextPageListener {
 
     TextView pageNumber;
     Chronometer chronometer;

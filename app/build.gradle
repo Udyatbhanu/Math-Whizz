@@ -31,5 +31,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.2.1'
     compile 'com.faradaj:blur:1.0.3'
     compile 'com.shamanland:fab:0.0.8'
+    compile 'com.home.ubbs.lib.theme:theme-lib:0.0.1'
+
 
 }

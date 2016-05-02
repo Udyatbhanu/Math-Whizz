@@ -6,14 +6,11 @@
 
     tools:context=".activity.SettingsActivity">
 
-    <include
-        android:id="@+id/headerLayout"
-        layout="@layout/header_layout"/>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_below="@id/headerLayout"
         android:background="@drawable/status_bar_background">
         <Chronometer
             android:id="@+id/timer"
