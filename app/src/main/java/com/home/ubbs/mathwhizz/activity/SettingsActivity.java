@@ -42,8 +42,7 @@ public class SettingsActivity extends BaseActivity implements SettingsItemsAdapt
         if (null != listView) {
             listView.setAdapter(new SettingsItemsAdapter(this));
 
-        }
-
+        }//
         if (null != startButton) {
             startButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
@@ -62,7 +61,7 @@ public class SettingsActivity extends BaseActivity implements SettingsItemsAdapt
                 }
             });
         }
-
+//
         MaterialSpinner spinner = (MaterialSpinner) findViewById(R.id.spinner);
         String []sets = getResources().getStringArray(R.array.session_sets);
         spinner.setItems(sets);
@@ -79,7 +78,6 @@ public class SettingsActivity extends BaseActivity implements SettingsItemsAdapt
 
             @Override
             public void onNothingSelected(MaterialSpinner spinner) {
-//                Snackbar.make(spinner, "Nothing selected", Snackbar.LENGTH_LONG).show();
             }
         });
 

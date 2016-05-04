@@ -27,7 +27,7 @@ public class SettingsItemsAdapter extends BaseAdapter {
 
     public SettingsItemsAdapter(Context context) {
         this.context = context;
-        this.drawables = new int[]{R.mipmap.add, R.mipmap.sub, R.mipmap.multiply, R.mipmap.divide};
+        this.drawables = new int[]{R.drawable.add, R.drawable.sub, R.drawable.multiply, R.drawable.divide};
         this.operators = new String[]{"Add", "Subtract", "Multiply", "Divide"};
     }
 
@@ -74,13 +74,13 @@ public class SettingsItemsAdapter extends BaseAdapter {
         }
 
         viewHolder.textView.setText(operators[position]);
-        if (position == 0) {
-            viewHolder.optionLayout.setImageResource(R.drawable.top);
-        } else if (position == 3) {
-            viewHolder.optionLayout.setImageResource(R.drawable.bottom);
-        } else {
-            viewHolder.optionLayout.setImageResource(R.drawable.mid);
-        }
+//        if (position == 0) {
+//            viewHolder.optionLayout.setImageResource(R.drawable.top);
+//        } else if (position == 3) {
+//            viewHolder.optionLayout.setImageResource(R.drawable.bottom);
+//        } else {
+//            viewHolder.optionLayout.setImageResource(R.drawable.mid);
+//        }
 
         viewHolder.textView.setText(Operator.values()[position].toString());
         viewHolder.operatorSymbol.setImageResource(drawables[position]);
