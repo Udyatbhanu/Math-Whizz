@@ -25,4 +25,9 @@
 
     <dimen name="choices_button_width">150dp</dimen>
     <dimen name="choices_button_height">120dp</dimen>
+
+    <dimen name="complete_text_size">30dp</dimen>
+    <dimen name="result_activity_sub_text">20sp</dimen>
+
+
 </resources>

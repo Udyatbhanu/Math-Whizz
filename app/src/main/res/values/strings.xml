@@ -14,6 +14,9 @@
     <string name="finish_text">Finish</string>
     <string name="header_text">Math Test Pro</string>
 
+    <string name="change_color">Change Color</string>
+    <string name="legal">Legal</string>
+
 
 
     <string name="complete_text">Hooray you finished your test, well done..!!</string>

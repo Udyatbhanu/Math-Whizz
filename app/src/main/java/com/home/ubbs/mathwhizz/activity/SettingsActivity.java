@@ -6,6 +6,9 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 
@@ -61,9 +64,14 @@ public class SettingsActivity extends BaseActivity implements SettingsItemsAdapt
                 }
             });
         }
-//
+
         MaterialSpinner spinner = (MaterialSpinner) findViewById(R.id.spinner);
-        String []sets = getResources().getStringArray(R.array.session_sets);
+//        String []sets = getResources().getStringArray(R.array.session_sets);
+//        spinner.setItems(sets);
+//        set = Integer.parseInt(sets[0]);
+
+        String []sets = new String[1];
+        sets[0]="1";
         spinner.setItems(sets);
         set = Integer.parseInt(sets[0]);
         spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
@@ -82,6 +90,34 @@ public class SettingsActivity extends BaseActivity implements SettingsItemsAdapt
         });
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.settings_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+
+        switch (item.getItemId()) {
+            case R.id.change_theme:
+                Intent activityChangeIntent = new Intent(SettingsActivity.this, ChangeThemeActivity.class);
+                SettingsActivity.this.startActivity(activityChangeIntent);
+                SettingsActivity.this.overridePendingTransition(R.animator.slide_in_left,
+                        R.animator.slide_out_left);
+                return true;
+            case R.id.legal:
+
+
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 
