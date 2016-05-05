@@ -58,32 +58,6 @@
         android:layout_alignParentRight="true"
         app:fabSize="normal"
         android:layout_margin="16dp"
-        android:src="@drawable/floating"
-        />
+        android:src="@drawable/floating" />
 
 </RelativeLayout>
-
-
-    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent">-->
-
-    <!--<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:layout_margin="20dp">-->
-
-
-    <!--<TextView--><!--android:id="@+id/textView"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"-->
-
-    <!--android:gravity="center"--><!--android:padding="10dp"--><!--android:text="@string/select_options"--><!--android:textSize="@dimen/settings_header_text_size" />-->
-
-    <!--<ListView--><!--android:id="@+id/listView"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@id/textView"--><!--android:layout_gravity="center_horizontal"--><!--android:layout_marginTop="20dp"--><!--android:divider="@null"--><!--android:dividerHeight="0dp" />-->
-
-
-    <!--<TextView--><!--android:id="@+id/select_set_text_view"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@id/listView"--><!--android:layout_marginTop="30dp"--><!--android:gravity="center"--><!--android:padding="10dp"--><!--android:text="@string/select_set"--><!--android:textSize="@dimen/settings_header_text_size" />-->
-
-    <!--<com.jaredrummler.materialspinner.MaterialSpinner--><!--android:id="@+id/spinner"--><!--android:layout_width="match_parent"--><!--android:layout_height="60dp"--><!--android:layout_below="@id/select_set_text_view"--><!--android:background="@drawable/button" />-->
-
-
-    <!--<android.support.design.widget.FloatingActionButton--><!--android:id="@+id/start_button"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignParentRight="true"--><!--android:layout_below="@id/spinner"--><!--android:layout_margin="16dp"--><!--android:src="@drawable/floating"--><!--android:theme="@style/FloatingActionButton.Dark" />--><!--</RelativeLayout>--><!--</ScrollView>-->
-
-
-
-
-
