@@ -66,12 +66,10 @@ public class SettingsActivity extends BaseActivity implements SettingsItemsAdapt
         }
 
         MaterialSpinner spinner = (MaterialSpinner) findViewById(R.id.spinner);
-//        String []sets = getResources().getStringArray(R.array.session_sets);
-//        spinner.setItems(sets);
-//        set = Integer.parseInt(sets[0]);
+        String []sets = getResources().getStringArray(R.array.session_sets);
+        spinner.setItems(sets);
+        set = Integer.parseInt(sets[0]);
 
-        String []sets = new String[1];
-        sets[0]="1";
         spinner.setItems(sets);
         set = Integer.parseInt(sets[0]);
         spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
@@ -111,8 +109,10 @@ public class SettingsActivity extends BaseActivity implements SettingsItemsAdapt
                         R.animator.slide_out_left);
                 return true;
             case R.id.legal:
-
-
+                Intent legalIntent = new Intent(SettingsActivity.this, LicenseActivity.class);
+                SettingsActivity.this.startActivity(legalIntent);
+                SettingsActivity.this.overridePendingTransition(R.animator.slide_in_left,
+                        R.animator.slide_out_left);
                 return true;
 
             default:

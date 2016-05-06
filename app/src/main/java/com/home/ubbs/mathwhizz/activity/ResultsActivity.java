@@ -29,6 +29,7 @@ public class ResultsActivity extends BaseActivity implements ResultsRecyclerAdap
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
+        setDisableOptionsMenu(true);
         mRecyclerView = (RecyclerView) findViewById(R.id.results_recycler_view);
         mRecyclerView.setHasFixedSize(false);
 

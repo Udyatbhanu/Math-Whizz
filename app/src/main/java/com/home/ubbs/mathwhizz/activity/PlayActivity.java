@@ -28,6 +28,7 @@ public class PlayActivity extends BaseActivity implements ChoicesAdapter.nextPag
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
+        setDisableOptionsMenu(true);
         pageNumber = (TextView) findViewById(R.id.page);
         chronometer = (Chronometer) findViewById(R.id.timer);
         chronometer.start();

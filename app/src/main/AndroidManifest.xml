@@ -30,6 +30,9 @@
         <activity android:name=".activity.ChangeThemeActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation"/>
+        <activity android:name=".activity.LicenseActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation"/>
     </application>
 
 </manifest>

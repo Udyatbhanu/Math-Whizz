@@ -1,6 +1,7 @@
 package com.home.ubbs.mathwhizz.view;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,8 +10,8 @@ import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.home.ubbs.lib.theme.ThemeSettings;
 import com.home.ubbs.mathwhizz.R;
+import com.home.ubbs.mathwhizz.activity.BaseActivity;
 
 /**
  * Created by udyatbhanu-mac on 5/4/16.
@@ -66,16 +67,29 @@ public class ThemesRecycleAdapter extends RecyclerView.Adapter<ThemesRecycleAdap
         final int theme = getResourceId(context,themeStr,"style", context.getPackageName());
 
 
+        holder.themeLayout.setBackgroundColor(ContextCompat.getColor(context, getResourceId(context,colorStr,"color", context.getPackageName())));
 
-        holder.themeLayout.setBackgroundColor(context.getResources().getColor(getResourceId(context,colorStr,"color", context.getPackageName())));
+//        holder.themeLayout.setBackgroundColor(context.getResources().getColor(getResourceId(context,colorStr,"color", context.getPackageName())));
 
         holder.choice.setChecked(position == selectedPosition);
-        holder.choice.setTag(new Integer(position));
 
+
+        holder.themeLayout.setTag(position);
+        holder.choice.setTag(position);
         holder.choice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ThemeSettings.style = theme;
+
+                BaseActivity.SELECTED_THEME = theme;
+                selectedPosition = (Integer)view.getTag();
+                notifyDataSetChanged();
+            }
+        });
+
+        holder.themeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BaseActivity.SELECTED_THEME = theme;
                 selectedPosition = (Integer)view.getTag();
                 notifyDataSetChanged();
             }
