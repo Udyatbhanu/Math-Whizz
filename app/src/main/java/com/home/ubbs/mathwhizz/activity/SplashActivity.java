@@ -1,11 +1,9 @@
 package com.home.ubbs.mathwhizz.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 
-import com.home.ubbs.mathwhizz.R;
+import com.home.ubbs.mathwhizz.view.SplashScreen;
 
 /**
  * Created by udyatbhanu-mac on 4/3/16.
@@ -14,26 +12,23 @@ public class SplashActivity extends FragmentActivity {
     /**
      * Duration of wait
      **/
-    private final int SPLASH_DISPLAY_LENGTH = 3000;
+    private final int SPLASH_DISPLAY_LENGTH = 4000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        SplashScreen config = new SplashScreen(SplashActivity.this).
+                withFullScreen().
+                withTargetActivity(SettingsActivity.class).
+                withFooterText("Copyright 2016").
+                withCenterAnimatedText().
+                withFooterAnimatedText().
+                withSplashDisplayTime(SPLASH_DISPLAY_LENGTH);
 
 
-        Handler handler = new Handler();
+        setContentView(config.build());
 
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
- /* Create an Intent that will start the Menu-Activity. */
-
-                Intent mainIntent = new Intent(SplashActivity.this, SettingsActivity.class);
-                SplashActivity.this.startActivity(mainIntent);
-                SplashActivity.this.finish();
-            }
-        }, SPLASH_DISPLAY_LENGTH);
 
 
     }

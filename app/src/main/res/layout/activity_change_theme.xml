@@ -20,16 +20,16 @@
         android:layout_alignParentBottom="true" style="@style/ButtonBar">
 
         <Button android:id="@+id/cancelButton" android:layout_width="wrap_content"
-            android:background="@drawable/style_finish_button"
-            android:layout_height="35dip" android:layout_weight="1"
-            android:textColor="@color/white"
+            style="?dynamicButtonTheme"
+            android:layout_height="35dip"
+            android:layout_weight="1"
             android:layout_marginRight="2dip"
             android:text="Cancel" />
 
         <Button android:id="@+id/change_theme_button" android:layout_width="wrap_content"
-            android:background="@drawable/style_finish_button"
-            android:layout_height="35dip" android:layout_weight="1"
-            android:textColor="@color/white"
+            style="?dynamicButtonTheme"
+            android:layout_height="35dip"
+            android:layout_weight="1"
             android:text="Change Color" />
     </LinearLayout>
 

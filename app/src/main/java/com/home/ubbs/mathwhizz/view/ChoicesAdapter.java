@@ -134,6 +134,7 @@ public class ChoicesAdapter extends BaseAdapter implements View.OnClickListener 
         String option = Integer.toString(mathFunction.getOptions()[position]);
         viewHolder.button.setText(option);
         viewHolder.button.setTag(option);
+        viewHolder.button.getBackground().setAlpha(128);
         viewHolder.button.setOnClickListener(this);
 
 
